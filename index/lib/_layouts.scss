@@ -16,5 +16,17 @@
 }
 
 .containerBackground{
-	background-image: url("docs/assets/img/universe.jpg");
+	background-color: green;
+}
+
+.containerFat{
+	overflow:hidden;
+  background-image: url('../img/losAngelesFire.jpg');
+  background-size:120% 100%;
+  background-position: left top;
+  background-repeat:no-repeat;
+	border-top:0px;
+  margin-top:0px;
+  padding-top:0px;
+  margin-bottom:0px;
 }

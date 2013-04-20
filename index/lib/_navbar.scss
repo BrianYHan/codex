@@ -10,10 +10,12 @@
 .navbar {
   overflow: visible;
   margin-bottom: $baseLineHeight;
-
+ padding-top:40px;
+ margin-top:0px;
   // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
   *position: relative;
-  *z-index: 2;
+  *z-index: 4;
+     background:transparent !important;
 }
 
 // Inner for background effects
@@ -22,10 +24,12 @@
   min-height: $navbarHeight;
   padding-left:  20px;
   padding-right: 20px;
-  @include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);
-  border: 1px solid $navbarBorder;
+
+   background:transparent !important;
+  // @include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);
+  // border: 1px solid $navbarBorder;
   @include border-radius($baseBorderRadius);
-  @include box-shadow(0 1px 4px rgba(0,0,0,.065));
+  // @include box-shadow(0 1px 4px rgba(0,0,0,.065));
 
   // Prevent floats from breaking the navbar
   @include clearfix();
@@ -52,13 +56,13 @@
   // Vertically center the text given $navbarHeight
   padding: (($navbarHeight - $baseLineHeight) / 2) 20px (($navbarHeight - $baseLineHeight) / 2);
   margin-left: -20px; // negative indent to left-align the text down the page
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 200;
   color: $navbarBrandColor;
   text-shadow: 0 1px 0 $navbarBackgroundHighlight;
   &:hover,
   &:focus {
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 
@@ -67,6 +71,7 @@
 .navbar-text {
   margin-bottom: 0;
   line-height: $navbarHeight;
+  font-size: 40px;
   color: $navbarText;
 }
 
@@ -157,7 +162,7 @@
 
 .navbar-static-top {
   position: static;
-  margin-bottom: 0; // remove 18px margin for default navbar
+  margin-bottom: none; // remove 18px margin for default navbar
   .navbar-inner {
     @include border-radius(0);
   }
@@ -177,13 +182,13 @@
   z-index: $zindexFixedNavbar;
   margin-bottom: 0; // remove 18px margin for default navbar
 }
-.navbar-fixed-top .navbar-inner,
-.navbar-static-top .navbar-inner {
-  border-width: 0 0 1px;
-}
-.navbar-fixed-bottom .navbar-inner {
-  border-width: 1px 0 0;
-}
+// .navbar-fixed-top .navbar-inner,
+// .navbar-static-top .navbar-inner {
+//   border-width: 0 0 1px;
+// }
+// .navbar-fixed-bottom .navbar-inner {
+//   border-width: 1px 0 0;
+// }
 .navbar-fixed-top .navbar-inner,
 .navbar-fixed-bottom .navbar-inner {
   padding-left:  0;
@@ -201,20 +206,21 @@
 
 // Fixed to top
 .navbar-fixed-top {
-  top: 0;
+top:60px;
 }
-.navbar-fixed-top,
-.navbar-static-top {
-  .navbar-inner {
-    @include box-shadow(0 1px 10px rgba(0,0,0,.1));
-  }
-}
+// .navbar-fixed-top,
+// .navbar-static-top {
+//   .navbar-inner {
+//     @include box-shadow(0 1px 10px rgba(0,0,0,.1));
+//   }
+// }
 
 // Fixed to bottom
 .navbar-fixed-bottom {
   bottom: 0;
   .navbar-inner {
     @include box-shadow(0 -1px 10px rgba(0,0,0,.1));
+    margin-top:0px;
   }
 }
 
@@ -226,9 +232,9 @@
 .navbar .nav {
   position: relative;
   left: 0;
-  display: block;
+  display: transparent;
   float: left;
-  margin: 0 10px 0 0;
+  margin: 0;
 }
 .navbar .nav.pull-right {
   float: right; // redeclare due to specificity
@@ -256,7 +262,7 @@
 .navbar .nav > li > a:hover {
   background-color: $navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover/:focus from .active
   color: $navbarLinkColorHover;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 // Active nav items
@@ -274,7 +280,7 @@
 .navbar .btn-navbar {
   display: none;
   float: right;
-  padding: 7px 10px;
+  padding: 20px 20px;
   margin-left: 5px;
   margin-right: 5px;
   @include buttonBackground(darken($navbarBackgroundHighlight, 5%), darken($navbarBackground, 5%));
@@ -304,8 +310,8 @@
     display: inline-block;
     border-left:   7px solid transparent;
     border-right:  7px solid transparent;
-    border-bottom: 7px solid #ccc;
-    border-bottom-color: $dropdownBorder;
+    // border-bottom: none;
+    // border-bottom-color: $dropdownBorder;
     position: absolute;
     top: -7px;
     left: 9px;
@@ -315,7 +321,7 @@
     display: inline-block;
     border-left:   6px solid transparent;
     border-right:  6px solid transparent;
-    border-bottom: 6px solid $dropdownBackground;
+    // border-bottom: 6px solid $dropdownBackground;
     position: absolute;
     top: -6px;
     left: 10px;
@@ -349,8 +355,8 @@
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: $navbarLinkBackgroundActive;
-  color: $navbarLinkColorActive;
+  background-color: transparent;
+  color: transparent;
 }
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
   border-top-color: $navbarLinkColor;
@@ -391,10 +397,10 @@
 
 .navbar-inverse {
 
-  .navbar-inner {
-    @include gradient-vertical($navbarInverseBackgroundHighlight, $navbarInverseBackground);
-    border-color: $navbarInverseBorder;
-  }
+  // .navbar-inner {
+  //   @include gradient-vertical($navbarInverseBackgroundHighlight, $navbarInverseBackground);
+  //   border-color: $navbarInverseBorder;
+  // }
 
   .brand,
   .nav > li > a {
@@ -456,13 +462,13 @@
   }
   .nav li.dropdown > .dropdown-toggle .caret {
     border-top-color: $navbarInverseLinkColor;
-    border-bottom-color: $navbarInverseLinkColor;
+    // border-bottom-color: $navbarInverseLinkColor;
   }
   .nav li.dropdown.open > .dropdown-toggle .caret,
   .nav li.dropdown.active > .dropdown-toggle .caret,
   .nav li.dropdown.open.active > .dropdown-toggle .caret {
     border-top-color: $navbarInverseLinkColorActive;
-    border-bottom-color: $navbarInverseLinkColorActive;
+    // border-bottom-color: $navbarInverseLinkColorActive;
   }
 
   // Navbar search
@@ -481,7 +487,7 @@
         padding: 5px 15px;
         color: $grayDark;
         text-shadow: 0 1px 0 $white;
-        background-color: $navbarInverseSearchBackgroundFocus;
+        background-color: transparent;
         border: 0;
         @include box-shadow(0 0 3px rgba(0,0,0,.15));
         outline: 0;

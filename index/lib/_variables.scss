@@ -15,6 +15,7 @@ $grayDark:              #333 !default;
 $gray:                  #555 !default;
 $grayLight:             #999 !default;
 $grayLighter:           #eee !default;
+$cream:									#FAFAFA !default;
 $white:                 #fff !default;
 
 
@@ -33,19 +34,21 @@ $purple:                #7a43b6 !default;
 // Scaffolding
 // -------------------------
 $bodyBackground:        $white !default;
-$textColor:             $grayDark !default;
+$textColor:             $white !default;
+
 
 
 // Links
 // -------------------------
 $linkColor:             #08c !default;
-$linkColorHover:        darken($linkColor, 15%) !default;
+$linkColorHover:        lighten($linkColor, 15%) !default;
 
 
 // Typography
 // -------------------------
-$sansFontFamily:        'Raleway',sans-serif;
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,800);
+$sansFontFamily:        'Satisfy',sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Satisfy);
+// @import url(http://fonts.googleapis.com/css?family=Raleway:400,800);
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
@@ -57,6 +60,10 @@ $altFontFamily:         $serifFontFamily !default;
 $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
+
+$codeColor:							$cream;
+$codeBackground:				black;
+
 
 
 // Component sizing
@@ -120,14 +127,14 @@ $inputHeight:                   $baseLineHeight + 10px; // base line-height + 8p
 
 // Dropdowns
 // -------------------------
-$dropdownBackground:            $white !default;
+$dropdownBackground:            $grayDark !default;
 $dropdownBorder:                rgba(0,0,0,.2) !default;
 $dropdownDividerTop:            #e5e5e5 !default;
 $dropdownDividerBottom:         $white !default;
 
-$dropdownLinkColor:             $grayDark !default;
-$dropdownLinkColorHover:        $white !default;
-$dropdownLinkColorActive:       $white !default;
+$dropdownLinkColor:             $grayLighter !default;
+$dropdownLinkColorHover:        $grayLighter !default;
+$dropdownLinkColorActive:       $yellow !default;
 
 $dropdownLinkBackgroundActive:  $linkColor !default;
 $dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
@@ -178,34 +185,34 @@ $wellBackground:                  #f5f5f5 !default;
 
 // Navbar
 // -------------------------
-$navbarCollapseWidth:             979px !default;
+$navbarCollapseWidth:             900px !default;
 $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
 
-$navbarHeight:                    40px !default;
-$navbarBackgroundHighlight:       #ffffff !default;
+$navbarHeight:                    60px !default;
+$navbarBackgroundHighlight:       #222222 !default;
 $navbarBackground:                darken($navbarBackgroundHighlight, 5%) !default;
-$navbarBorder:                    darken($navbarBackground, 12%) !default;
+// $navbarBorder:                    darken($navbarBackground, 12%) !default;
 
-$navbarText:                      #777 !default;
-$navbarLinkColor:                 #777 !default;
+$navbarText:                      #999 !default;
+$navbarLinkColor:                 #999 !default;
 $navbarLinkColorHover:            $grayDark !default;
-$navbarLinkColorActive:           $gray !default;
+$navbarLinkColorActive:           transparent !default;
 $navbarLinkBackgroundHover:       transparent !default;
 $navbarLinkBackgroundActive:      darken($navbarBackground, 5%) !default;
 
 $navbarBrandColor:                $navbarLinkColor !default;
 
 // Inverted navbar
-$navbarInverseBackground:                #111111 !default;
-$navbarInverseBackgroundHighlight:       #222222 !default;
-$navbarInverseBorder:                    #252525 !default;
+$navbarInverseBackground:                       #111111 !default;
+$navbarInverseBackgroundHighlight:            #222222 !default;
+$navbarInverseBorder:                    transparent !default;
 
-$navbarInverseText:                      $grayLight !default;
-$navbarInverseLinkColor:                 $grayLight !default;
-$navbarInverseLinkColorHover:            $white !default;
+$navbarInverseText:                      $white !default;
+$navbarInverseLinkColor:                 $white !default;
+$navbarInverseLinkColorHover:            $yellow !default;
 $navbarInverseLinkColorActive:           $navbarInverseLinkColorHover !default;
 $navbarInverseLinkBackgroundHover:       transparent !default;
-$navbarInverseLinkBackgroundActive:      $navbarInverseBackground !default;
+$navbarInverseLinkBackgroundActive:      transparent !default;
 
 $navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%) !default;
 $navbarInverseSearchBackgroundFocus:     $white !default;

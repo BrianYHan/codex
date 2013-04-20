@@ -7,13 +7,40 @@
 // -------------------------
 
 body {
-  margin: 0;
+  border-top:0px;
+  padding-top:none;
+  margin-top:0px;
   font-family: $baseFontFamily;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   color: $textColor;
-  background-color: $bodyBackground;
+  min-height:100px;
+  /*background-color: $bodyBackground; */
+ 
+  
 }
+
+#header{
+  height:60px;
+}
+
+#wrap{
+    min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+}
+
+  #push{
+  height: 60px;
+  }
+
+footer {
+        background-color: black;
+         height: 20px;
+         line-height:25px;
+      }
 
 
 // Links

@@ -1,38 +1,40 @@
-
-<div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html">Bootstrap</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active">
-                <a href="./index.html">Home</a>
+<div id="header">
+      <div id="navbar" class="navbar navbar-fixed-top">
+        <div class="navbar-inner navbar-inverse">
+          <div class="container">
+            <a class="brand pull-left" href="#">Brian Y Han</a>
+            <ul class="nav" role="navigation">
+              <li class="dropdown">
+                <a data-target="#" id="drop1" href="about.php" role="button" class="dropdown-toggle" data-toggle="dropdown">About Me<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="about.php">Why I don't Suck</a></li>
+                </ul>
               </li>
-              <li class="">
-                <a href="./getting-started.html">Get started</a>
-              </li>
-              <li class="">
-                <a href="./scaffolding.html">Scaffolding</a>
-              </li>
-              <li class="">
-                <a href="./base-css.html">Base CSS</a>
-              </li>
-              <li class="">
-                <a href="./components.html">Components</a>
-              </li>
-              <li class="">
-                <a href="./javascript.html">JavaScript</a>
-              </li>
-              <li class="">
-                <a href="./customize.html">Customize</a>
+          
+              <li id="fat-menu" class="dropdown">
+                <a data-target="#" href="/code.php" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Code<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="code301.php">ITP 301 | JS</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www-scf.usc.edu/~brianyha/itp301/classpage.html">301 Classpage</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="code460.php">ITP 460 | Ruby</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://sheltered-taiga-9686.herokuapp.com/">The ABC$ of Money</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://mysterious-hollows-7470.herokuapp.com/">Ace Dental Lab</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/BrianYHan">Github Account</a></li>
+                </ul>
+                <li class="dropdown" id="fat-menu" class="pull-right">
+                  <a href="brianhanCV.pdf" class="pull-right" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Download CV</a>
+                </li>
               </li>
             </ul>
+
           </div>
+        <br>
+        <br>
+        <br>
+        <br>
         </div>
-      </div>
-    </div>
+      </div> 
+</div>
