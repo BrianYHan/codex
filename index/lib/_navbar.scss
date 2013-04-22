@@ -9,13 +9,15 @@
 // Base class and wrapper
 .navbar {
   overflow: visible;
-  margin-bottom: $baseLineHeight;
- padding-top:40px;
+  // margin-bottom: $baseLineHeight;
+ padding-top:20px;
  margin-top:0px;
+ padding-bottom:50px;
+ margin-bottom:50px;
   // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
   *position: relative;
   *z-index: 4;
-     background:transparent !important;
+  background:transparent !important;
 }
 
 // Inner for background effects
@@ -39,6 +41,8 @@
 // We then reset it for fixed navbars in the #gridSystem mixin
 .navbar .container {
   width: auto;
+  padding-bottom:50px;
+  margin-bottom:50px;
 }
 
 // Override the default collapsed state
@@ -59,6 +63,7 @@
   font-size: 40px;
   font-weight: 200;
   color: $navbarBrandColor;
+  
   text-shadow: 0 1px 0 $navbarBackgroundHighlight;
   &:hover,
   &:focus {
@@ -206,7 +211,7 @@
 
 // Fixed to top
 .navbar-fixed-top {
-top:60px;
+  top: 0;
 }
 // .navbar-fixed-top,
 // .navbar-static-top {

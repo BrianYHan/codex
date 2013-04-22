@@ -12,7 +12,7 @@
               </li>
           
               <li id="fat-menu" class="dropdown">
-                <a data-target="#" href="/code.php" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Code<b class="caret"></b></a>
+                <a href="/code.php" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Code<b class="caret"></b></a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="code301.php">ITP 301 | JS</a></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www-scf.usc.edu/~brianyha/itp301/classpage.html">301 Classpage</a></li>
@@ -24,6 +24,8 @@
                   <li role="presentation" class="divider"></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="http://github.com/BrianYHan">Github Account</a></li>
                 </ul>
+                  <li id="fat-menu" class="dropdown">
+             
                 <li class="dropdown" id="fat-menu" class="pull-right">
                   <a href="brianhanCV.pdf" class="pull-right" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Download CV</a>
                 </li>

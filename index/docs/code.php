@@ -26,11 +26,11 @@
                                    <link rel="shortcut icon" href="assets/ico/favicon.png">  -->
   </head>
   <body data-spy="scroll" data-target=".navbar">
-
+<div class="containerFat">
     <!-- Navbar
     ================================================== -->
 <?php include("header.php"); ?>
-
+<br>
     
 
 <div class="row-fluid">
@@ -128,5 +128,6 @@
     ================================================== -->
     <?php include("footer.php"); ?>
 <br>
+</div>
   </body>
 </html>
