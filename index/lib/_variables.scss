@@ -29,6 +29,7 @@ $yellow:                #ffc40d !default;
 $orange:                #f89406 !default;
 $pink:                  #c3325f !default;
 $purple:                #7a43b6 !default;
+$textSO:								#25D6E6 !default;
 
 
 // Scaffolding
@@ -59,7 +60,7 @@ $altFontFamily:         $serifFontFamily !default;
 
 $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold !default;    // instead of browser default, bold
-$headingsColor:         inherit !default; // empty to use BS default, $textColor
+$headingsColor:         $textSO !default; // empty to use BS default, $textColor
 
 $codeColor:							$cream;
 $codeBackground:				black;

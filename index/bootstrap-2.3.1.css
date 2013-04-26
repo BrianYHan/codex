@@ -232,9 +232,11 @@ body {
 }
 
 footer {
-  background-color: black;
+  background: transparent;
   height: 20px;
-  line-height: 25px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 a {
@@ -619,6 +621,51 @@ a:focus {
   padding-top: 0px;
   margin-bottom: 0px;
   padding-left: 0px;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  *zoom: 1;
+}
+.containerFat:before, .containerFat:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.containerFat:after {
+  clear: both;
+}
+
+#codeBank {
+  border-top: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 20px;
+  padding-left: 20px;
+  *zoom: 1;
+}
+#codeBank:before, #codeBank:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+#codeBank:after {
+  clear: both;
+}
+
+#personalInfo {
+  margin-bottom: 0;
+  line-height: 18px;
+  font-size: 18px;
+  color: #999999;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#personalInfo a:hover, #personalInfo a:focus {
+  color: #ffc40d;
+  text-decoration: underline;
 }
 
 p {
@@ -649,12 +696,12 @@ cite {
 }
 
 .muted {
-  color: #999999;
+  color: #fafafa;
 }
 
 a.muted:hover,
 a.muted:focus {
-  color: gray;
+  color: #e1e1e1;
 }
 
 .text-warning {
@@ -710,13 +757,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
   font-weight: bold;
   line-height: 20px;
-  color: inherit;
+  color: #25d6e6;
   text-rendering: optimizelegibility;
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-weight: normal;
   line-height: 1;
-  color: #999999;
+  color: white;
 }
 
 h1,
@@ -5588,6 +5635,44 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+#accordion {
+  height: 600px;
+  font-family: "Satisfy", sans-serif;
+  margin: 80px auto;
+  opacity: .7;
+}
+
+#accordion div {
+  float: left;
+  height: 25%;
+  width: 300px;
+  overflow: hidden;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#accordion:hover div, #accordion.hover div {
+  height: 60px;
+}
+
+#accordion:hover div:hover, #accordion.hover div.hover {
+  height: 500px;
+  overflow: auto;
+}
+
+#summer {
+  background-color: #FF6633;
+}
+
+#autumn {
+  background-color: #FFCC00;
+}
+
+#winter {
+  background-color: #999999;
 }
 
 .accordion {

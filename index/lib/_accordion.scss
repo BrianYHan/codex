@@ -1,9 +1,39 @@
 //
 // Accordion
 // --------------------------------------------------
+#accordion {
+   height: 600px;
+   font-family:$baseFontFamily;
+   margin: 80px auto; 
+   opacity:.7;
+}
+#accordion div {
+   float: left;
+   height:25%;
+   width: 300px;
+   overflow: hidden;
+  @include border-radius($baseBorderRadius);}
+#accordion:hover div, #accordion.hover div {
+   height: 60px; }
+#accordion:hover div:hover, #accordion.hover div.hover {
+   height: 500px;
+   overflow: auto; }
+
+#summer {
+   background-color:#FF6633; }
+#autumn {
+   background-color: #FFCC00; }
+#winter {
+   background-color:$grayLight; }
 
 
-// Parent container
+
+
+
+
+
+
+// Parent container (DEFAULT Accordion)
 .accordion {
   margin-bottom: $baseLineHeight;
 }
@@ -32,3 +62,4 @@
   padding: 9px 15px;
   border-top: 1px solid #e5e5e5;
 }
+

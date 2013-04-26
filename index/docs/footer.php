@@ -6,7 +6,7 @@
           <li class="muted">&middot;</li>
           <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Github</a></li>
           <li class="muted">&middot;</li>
-          <li><a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md">Changelog</a></li>
+          <li><a href="http://www.linkedin.com/pub/brian-han/66/a9b/1b3/">Linkedin</a></li>
         </ul>
       </div>
       </div>
@@ -36,7 +36,7 @@
     <script src="assets/js/google-code-prettify/prettify.js"></script>
     <script src="assets/js/application.js"></script>
     <script src="assets/js/jquery.easing.1.3.js"></script>
-    <script src="assets/js/jquery.easing.mousewheel.min.js"></script>
+    <script src="assets/js/jquery.mousewheel.min.js"></script>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script src="assets/js/jquery.masonry.min.js"></script>
@@ -47,8 +47,22 @@
 
     <script src="assets/js/bgImage.js"></script>
     <script src="assets/js/imagePanner.js"></script>
-    <!--Contact page -->
+
+    <script src="assets/js/jquery.ascensor.min.js"></script>
+    <script src="assets/js/jquery.ascensor.js"></script>
+
+
+    
+
+    <!--Contact page --> 
     <script src="assets/js/contactPage.js"></script>
+
+    <!--JS for the nav-->
+    <script src="assets/js/header.js"></script>
+
+
+    <!--JS to make moving page smoother-->
+    <script src="assets/js/jquery.equalheights.js"></script>
 
     <script><!--Changes stylesheet according to time-->
       function getStylesheet() {

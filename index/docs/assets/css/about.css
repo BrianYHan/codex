@@ -1,51 +1,5 @@
 
-@charset "UTF-8";
-/*	 **************************************************************************************************************************
-	|																  														  |
-	|													CSS Document for classpage.html						  				  |
-	|											This is the stylesheet for my ITP301 class page:		  					  |
-	|										 http://www-scf.usc.edu/~jamestly/itp301/classpage.html		 					  |
-	|														 Published January 2013						  			       	  |
-	|														  Author: James Lynch						  					  |
-	|																  														  |
-	 **************************************************************************************************************************	
-	|																  														  |
-	|						 									Color Palette:												  |
-	|																  														  |
-	 **************************************************************************************************************************
-*/
-
-/*   	A CSS reset removes default styling from page elements so that you are "starting fresh" with the attributes you choose to 
-		apply. This is important for two reasons. One, puts all browsers on a level playing field. Different browsers apply 
-		different default styling to elements, so if you are looking to have your website look the same in all the different 
-		browsers (you are), a CSS reset is important. Two, it allows you to "think forwards" as far as applying attributes like 
-		margin and padding to page elements. Instead of having to "think backwords" in removing attributes from elements, you can 
-		only apply them to elements you know need them. (http://css-tricks.com/poll-results-what-css-reset-do-you-use/) */
-
-/*	 *****************************************************   CSS RESET   *****************************************************   */
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain) */
-
-html, body, div, span, applet, object, 
-iframe, h1, h2, h3, h4, h5, h6, p, 
-blockquote, pre, a, abbr, acronym, address, 
-big, cite, code, del, dfn, em, img, ins, 
-kbd, q, s, samp, small, strike, strong, 
-sub, sup, tt, var, b, u, i, center, dl, 
-dt, dd, ol, ul, li, fieldset, form, label, 
-legend, table, caption, tbody, tfoot, 
-thead, tr, th, td, article, aside, canvas, 
-details, embed, figure, figcaption, footer, 
-header, hgroup, menu, nav, output, ruby, 
-section, summary,time, mark, audio, video 	{ margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
-											/* Gets rid of defaults and establishes a standard for all html elements which gets rid of any padding or margins */
-article, aside, details, figcaption, 
-figure, footer, header, hgroup, menu, nav, 
-section 									{ display: block; }
-											/* HTML5 display-role reset for older browsers */
-body 										{ line-height: 1; background: #FFFFFF url(../images/background/background.png) repeat; display: block; text-align: center; }
+body 										{ line-height: 1; background: #FFFFFF url(../images/background/background.png) repeat;  text-align: center; }
 											/* Establishes standard line height for text across browsers */
 ol, ul, li 									{ list-style: none; display: inline-block; }
 											/* Removes the bullets (ul) and numbers (ol) from unordered and ordered lists */
@@ -63,21 +17,21 @@ hr 											{ background-color: #CCCCCC; border: none; height: 1px; }
 
 
 
-html, body, p, th, td, li, dd, dt 			{ font-family: Satisfy; color: #000000; text-shadow: 0px 0px 0px #333333; }
+html, body, p, th, td, li, dd, dt 			{ font-family: Satisfy;   }
 											/* Establishes the default font size, family and color for (non-heading) text */
-h1, h2, h3, h4, h5, h6 						{ color: #25D6E6; text-shadow: 0px 7px 15px #0593A9; }
+h1, h2, h3, h4, h5, h6 						{ color: #25D6E6;  }
 											/* Establishes the default font family and color for heading text (size is dependent on the heading number) */
-h1 											{ font-size: 72pt; }
+h1 											{ font-size: 60pt; }
 											/* Overrides and sets the font size for the most important header (major sections); h1-h6 are used by search engines to index the structure of the page */
 h2 											{ font-size: 24pt; }
 											/* Overrides and sets the font size for the second most important header (secondary sections) */
-h3 											{ font-size: 14pt; color: #000000; text-shadow: 0px 0px 0px #333333; }
+h3 											{ font-size: 14pt;  text-shadow: 0px 0px 0px #333333; }
 											/* Overrides and sets the font size for the third most important header */
-h4 											{ font-size: 16pt; color: #000000; }
+h4 											{ font-size: 16pt;  }
 											/* Overrides and sets the font size for the fourth most important header */
 h5 											{ font-size: 12pt; text-shadow: 0px 0px 0px #333333; }
 											/* Overrides and sets the font size for the second least important header */
-h6 											{ font: 10pt Venera-Thin; text-shadow: 0px 0px 0px #333333; }
+h6 											{ font: 10pt; text-shadow: 0px 0px 0px #333333; }
 											/* Overrides and sets the font size for the least important header */
 
 /*	 *************************************************   HIGHLIGHT SETTINGS   *************************************************   */
@@ -90,10 +44,7 @@ h6 											{ font: 10pt Venera-Thin; text-shadow: 0px 0px 0px #333333; }
 
 /*	 ***************************************************   LINK SETTINGS   ****************************************************   */
 
-a											{ color: #333333; text-decoration: none; }
-    										/*  Sets the defaults for links (navy blue and no decoration aka no underline)  */
-a:hover 									{ color: #000000;  text-decoration: none; }
-											/*  Sets the defaults for rolling over a link (only difference here is light grey color)  */
+
 
 
 /*	 **************************************************   SHADOW SETTINGS   ***************************************************   */
@@ -186,17 +137,7 @@ a:hover 									{ color: #000000;  text-decoration: none; }
 
 #add-contact-title 							{ width: 200px; height: 25px; float: left; position: relative; top: -3px; }
 
-#ratings 									{ width: 300px; margin: 0px auto; display: block; }
-
-#ratings div 								{ display: inline; float: left; width: 100px; padding-top: 40px; padding-bottom: 40px; }
-
-#my-rating 									{ background: url(../images/graphics/rating-shapes-1.png); background-position: -26px -40px; background-repeat: no-repeat; }
-
-#rotten-critics 							{ background: url(../images/graphics/rating-shapes-1.png); background-position: -26px -129px; background-repeat: no-repeat; }
-
-#rotten-audience 							{ background: url(../images/graphics/rating-shapes-1.png); background-position: -26px -218px; background-repeat: no-repeat; }
-
-#film-synopsis 								{ clear: both; height: 160px; overflow: auto; margin-bottom: 30px; }
+#contact-synopsis 								{ clear: both; height: 160px; overflow: auto; margin-bottom: 30px; }
 
 #previous-contact 							{ position: absolute; top: 375px; left: 0px; background-image: url(../images/graphics/prev.png); width: 50px; height: 60px; }
 
@@ -222,11 +163,7 @@ td 											{ width: 300px; }
 
 tr 											{ height: 50px; }
 
-footer 										{ background: #313131; padding-top: 50px; padding-bottom: 50px; margin-top: 50px; color: #E2E2E2; }
 
-footer a 									{ color: #E2E2E2; }
-
-footer a:hover 								{ color: #E2E2E2; text-shadow: 0px 0px 7px #cecece; background: none; }
 
 #add-contact 									{ visibility: hidden; display: none; }
 
@@ -236,20 +173,9 @@ footer a:hover 								{ color: #E2E2E2; text-shadow: 0px 0px 7px #cecece; backg
 
 .invalid 									{ background: #e63625; }
 
-input[type=button] 							{ font: 16pt Venera; padding-top: 5px; margin-top: 10px; }
-
-#about-ratings 								{ position: relative; clear: both; }
+input[type=button] 							{ font: 16pt; padding-top: 5px; margin-top: 10px; }
 
 .info-container 							{ background: #FFFFFF; opacity: 0.75; width: 100px; position: absolute; border-radius: 10px; border: 3px solid #25D6E6; }
 
 .info 										{ font: 8pt Venera; color: #313131; padding: 10px; font-weight: bold; }
-
-/*#about-ratings img 							{ width: 50px; }
-
-#about-my-ratings 							{ position: absolute; top: -50px; left: 0px; width: 50px; }
-
-#about-rt-critics-ratings 					{ position: absolute; top: -50px; left: 28px; width: 50px; }
-
-#about-rt-audience-ratings 				 	{ position: absolute; top: -33px; left: 15px; width: 75px; }*/
-
 

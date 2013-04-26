@@ -3,6 +3,11 @@
 // --------------------------------------------------
 
 
+// Janky solution for now to account for links outside the .nav
+// -------------------------
+
+
+
 // COMMON STYLES
 // -------------
 
@@ -63,7 +68,7 @@
   font-size: 40px;
   font-weight: 200;
   color: $navbarBrandColor;
-  
+
   text-shadow: 0 1px 0 $navbarBackgroundHighlight;
   &:hover,
   &:focus {
