@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var i = 0;
 
-	$("#add-contact-show").bind("click", function() { // Toggles the visibility of the "Add contact" Form
+	$("#add-contact-show").bind("click", function() { 
 		if ($("#add-contact").css("visibility") == "hidden") {
 			$("#add-contact").css("visibility", "visible");
 			$("#add-contact").css("display", "block");
@@ -15,15 +15,15 @@ $(document).ready(function() {
 	});
 
 	$("input[type=text]").focus(function() {
-		$(this).css("border", "3px solid #EAF28F");
+		$(this).css("border", "3px solid #222");
 	});
 
 	$("textarea").focus(function() {
-		$(this).css("border", "3px solid #EAF28F");
+		$(this).css("border", "3px solid #222");
 	});
 
 	$("select").focus(function() {
-		$(this).css("border", "3px solid #EAF28F");
+		$(this).css("border", "3px solid #222");
 	});
 
 	$("#next-contact").bind("click", function() {
@@ -67,10 +67,10 @@ $(document).ready(function() {
 		contactForm();
 	});
 
-	$("#next-contact-preload").hide(); // Only preload the first and next because of loading time considerations (esp. contact poster)
-	$("#prev-contact-preload").hide(); // Only preload the first and next because of loading time considerations (esp. contact poster)
+	$("#next-contact-preload").hide(); 
+	$("#prev-contact-preload").hide(); 
 
-	var dateOptions = "<option value='empty'> </option>"; // This variable will be used to load the HTML inside the select fields (dates 1900-2013) in the Release Date form field
+	var dateOptions = "<option value='empty'> </option>"; 
 
 	for(j = 2013; j >= 1900; j = j - 1) { 
 		dateOptions = dateOptions + "<option value='" + j + "'>" + j + "</option>"; 
@@ -79,27 +79,27 @@ $(document).ready(function() {
 	document.getElementById("contact-year").innerHTML = dateOptions; 
 	var contact = [];
 
-	var addcontact = function(mTitle, relDate, mname, mresps, mPoster, mSynopsis) {
+	var addcontact = function(mTitle, timeSpent, mname, mresps, mpicture, mcomments) {
 		var newcontact = {
 			contactTitle: mTitle, 
-			releaseDate: relDate, 
+			releaseDate: timeSpent, 
 			name: mname, 
 			resps: mresps, 
-			posterURL: 
-			mPoster, 
-			Synopsis: mSynopsis
+			pictureURL: 
+			mpicture, 
+			comments: mcomments
 		};
 			contact.push(newcontact);
 	}
 
-	addcontact("Campaign Organizer", "2012", "Megan Hultgrien", "Organizing unions, Leading local charter clubs, Led phonebanks", "../jquery-data-page/images/posters/side-effects.jpg", "He's so awesome. I just want to have his babies.");
-	addcontact("Teaching Assistant", "2013", "Kabir Kang", "Assisting Professor during lectures, Exam Grading, ", "../jquery-data-page/images/posters/the-dark-knight-rises.jpg", "Despite his tarnished reputation after the events of The Dark Knight, in which he took the rap for Dent's crimes, Batman feels compelled to intervene to assist the city and its police force which is struggling to cope with Bane's plans to destroy the city.");
-	addcontact("Domestic Supervisor", "2012", "Samuel L. Catson", "Cleaning up my poop, Bathing me, Combing me", "../jquery-data-page/images/posters/the-avengers.jpg", "Marvel Studios presents my butthole");
-	addcontact("Ted", "2012", "Seth MacFarlane", "Mark Wahlberg, Mila Kunis, Seth MacFarlane", "../jquery-data-page/images/posters/ted.jpg", "John makes a Christmas miracle happen by bringing his one and only friend to life, his teddy bear. The two grow up together and John must then choose to stay with his girlfriend or keep his friendship with his crude and extremely inappropriate teddy bear, Ted.");
+	addcontact("Campaign Organizer", "2012", "Megan Hultgrien", "Organizing unions, Leading local charter clubs, Led phonebanks", "assets/img/megan.jpg", "He's so awesome. ");
+	addcontact("Teaching Assistant", "2013", "Kabir Kang", "Assisting Professor during lectures, Exam Grading, ", "assets/img/kabir.jpg", " Greatest guy ever");
+	addcontact("Domestic Supervisor", "2012", "Samuel L. Catson", "Cleaning up my poop, Bathing me, Combing me", "assets/img/drake.png", "Yes, my cat is actually Drake.");
+	addcontact("Entrepreneur", "2013", "Natalie Pace", "Designed Frontend/Backend of Application - The ABC's of Financial Literacy", "assets/img/pace.jpg", "YOLO baby");
 
 	var displaycontact = function(index, elementID) {
-		var currentHTML = "<div id='current-left'><img id='current-poster' class='back-shadow' src='" + contact[index]["posterURL"];
-			currentHTML = currentHTML + "' alt='" + contact[index]["contactTitle"] + " Poster'/></div><div id='current-right'><h2 id='contact-title'>";
+		var currentHTML = "<div id='current-left'><img id='current-picture' class='back-shadow' src='" + contact[index]["pictureURL"];
+			currentHTML = currentHTML + "' alt='" + contact[index]["contactTitle"] + " picture'/></div><div id='current-right'><h2 id='contact-job'>";
 			currentHTML = currentHTML + contact[index]["contactTitle"] + "</h2>" + "<h3 id='release-year'>" + contact[index]["releaseDate"] + "</h3>";
 			currentHTML = currentHTML + "<h3 id='directed-by'>Name: <span class='italics'><a href='#' id='return-name'>";
 			currentHTML = currentHTML + contact[index]["name"] + "</a></span></h3><h3 id='resps'>Responsibilities: <span class='italics'>";
@@ -121,7 +121,7 @@ $(document).ready(function() {
 					currentHTML = currentHTML + contactResps; // Print the last star in the comma-separated list
 			}
 
-			currentHTML = currentHTML + "</span></h3><p id='contact-synopsis'>" + contact[index]["Synopsis"];
+			currentHTML = currentHTML + "</span></h3><p id='contact-comments'> Comments: " + contact[index]["comments"];
 			currentHTML = currentHTML + "</p></div>";
 		
 		$("#" + elementID).html(currentHTML); // JQuery method of innerHTML
@@ -147,32 +147,32 @@ $(document).ready(function() {
 	displaycontact(i, "current-contact"); // Load a random contact from the array
 
 	var contactForm = function() {
-		var mTitle = $("#contact-title").val();
-		var relDate = $("#contact-year").val();
+		var mTitle = $("#contact-job").val();
+		var timeSpent = $("#contact-year").val();
 		var mname = $("#contact-name").val();
 		var mresps = $("#contact-resps").val();
-		var mPoster = $("#contact-poster").val();
-		var mSynopsis = $("#contact-synopsis").val();
+		var mpicture = $("#contact-picture").val();
+		var mcomments = $("#contact-comments").val();
 
-		stripFormatting(mTitle, relDate, mname, mresps, mPoster, mSynopsis);
+		stripFormatting(mTitle, timeSpent, mname, mresps, mpicture, mcomments);
 		var newcontact = {
 			contactTitle: mTitle, 
-			releaseDate: relDate, 
+			releaseDate: timeSpent, 
 			name: mname, 
 			resps: mresps, 
-			posterURL: mPoster, 
-			Synopsis: mSynopsis,
+			pictureURL: mpicture, 
+			comments: mcomments,
 		};
 		contact.push(newcontact);
 	}
 
-	var stripFormatting = function(mTitle, relDate, mname, mresps, mPoster, mSynopsis) {
+	var stripFormatting = function(mTitle, timeSpent, mname, mresps, mpicture, mcomments) {
 		mTitle = mTitle.replace(/\"/g,""); 
-		relDate = relDate.replace(/\"/g,""); 
+		timeSpent = timeSpent.replace(/\"/g,""); 
 		mname = mname.replace(/\"/g,""); 
 		mresps = mresps.replace(/\"/g,""); 
-		mPoster = mPoster.replace(/\"/g,""); 
-		mSynopsis = mSynopsis.replace(/\"/g,"");
+		mpicture = mpicture.replace(/\"/g,""); 
+		mcomments = mcomments.replace(/\"/g,"");
 	}
 
 	var successSubmission = function() {
@@ -181,11 +181,9 @@ $(document).ready(function() {
 		$("#contact-form").css()
 	}
 
-	// ERROR REPORTING FOR THE FORM (WIP)
-	$("#contact-title").bind('keydown', function() {
-		// If Valid Input, change border to green
-		if(checkInput("contact-title")) { $(this).css("border", "3px solid #00ef8d"); }
-		// Else if Invalid (AKA left empty), change border to red and output corresponding errors
+
+	$("#contact-job").bind('keydown', function() {
+		if(checkInput("contact-job")) { $(this).css("border", "3px solid #00ef8d"); }
 		else { $(this).css("border", "3px solid #e63625"); }
 	});
 
@@ -195,8 +193,8 @@ $(document).ready(function() {
 	for (j = 0; j <= 10; j = j + 1) { errorReport[j] = false; }
  	
  	var errors = []; // Array to store each error; 0 = contact Title, 1 = Release Date, 2 = contact name, 3 = resps respss, 
-						  	  // 4 = Ratings containing non-numeric characters, 5 = Ratings exceeding 100, 6 = contact Poster URL,
-						      // 7 = Plot Synopsis
+						  	  // 4 = Ratings containing non-numeric characters, 5 = Ratings exceeding 100, 6 = contact picture URL,
+						      // 7 = Plot comments
 
 	// No errors to begin with
 	for (j = 0; j <= 7; j = j + 1) { errors[j] = false; }
@@ -213,18 +211,18 @@ $(document).ready(function() {
 		errorReport[0] = "<h3 id='errors'>Errors</h3><h5>Please fix the following errors before submitting the form</h5>"
 
 		switch(elementID) {
-			case "contact-title":
+			case "contact-job":
 				if (removedBlanks != "") { // If not-empty
 					if (errors[0] != false) { // If once incorrect, fix the BG color and make correct
-						document.getElementById("#contact-title-error").className = "valid"; // Valid has styling of green BG (Keeps error message, just changes BG color)
-						// alert(document.getElementById("#contact-title-error").className);
+						document.getElementById("#contact-job-error").className = "valid"; // Valid has styling of green BG (Keeps error message, just changes BG color)
+						// alert(document.getElementById("#contact-job-error").className);
 						errors[0] = false;
 					}
 					return true;
 				}
 				else { // If empty
-					document.getElementById("#contact-title-error").innerHTML = "You cannot leave the contact Title blank"; // Error message
-					document.getElementById("#contact-title-error").className = "invalid"; // Invalid has styling of red BG
+					document.getElementById("#contact-job-error").innerHTML = "You cannot leave the contact Title blank"; // Error message
+					document.getElementById("#contact-job-error").className = "invalid"; // Invalid has styling of red BG
 					errors[0] = true;
 					errorsExist = true;
 					return false;

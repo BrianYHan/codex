@@ -15,6 +15,7 @@ body {
   padding-top: 0px;
   padding-left:0px;
   padding-right:0px;
+  padding-bottom:0px;
 }
 
 /* Code in headings */
@@ -303,10 +304,9 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 
 .footer {
   text-align: center;
-  padding: 0px 0px;
-  margin-top: 0px;
   border-top: 0px solid #333;
-  background-color: transparent;
+  
+  
 }
 .footer p {
   margin-bottom: 0;

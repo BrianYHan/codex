@@ -8,12 +8,21 @@
 
 p {
   margin: 0 0 $baseLineHeight / 2;
+  font-family: 'Raleway', sans-serif;
 }
 .lead {
   margin-bottom: $baseLineHeight;
   font-size: $baseFontSize * 1.5;
   font-weight: 200;
   line-height: $baseLineHeight * 1.5;
+}
+
+.ralewayFont{
+  font-family:$raleway;
+}
+
+.satisfyFont{
+  font-family:$sansFontFamily;
 }
 
 
@@ -55,8 +64,21 @@ a.text-success:focus { color: darken($successText, 10%); }
 
 // Headings
 // -------------------------
+h1 {
+  margin: ($baseLineHeight / 2) 0;
+  font-family: $sansFontFamily;
+  font-weight: $headingsFontWeight;
+  line-height: $baseLineHeight;
+  color: $headingsColor;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: $white;
+  }
+}
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   margin: ($baseLineHeight / 2) 0;
   font-family: $headingsFontFamily;
   font-weight: $headingsFontWeight;
@@ -105,6 +127,7 @@ h4 small { font-size: $baseFontSize; }
 ul, ol {
   padding: 0;
   margin: 0 0 $baseLineHeight / 2 25px;
+  font-family: 'Raleway', sans-serif;
 }
 ul ul,
 ul ol,

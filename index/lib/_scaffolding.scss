@@ -1,29 +1,5 @@
-//
-// Scaffolding
-// --------------------------------------------------
 
 
-// Body reset
-// -------------------------
-
-body {
-  border-top:0px;
-  padding-top:none;
-  margin-top:0px;
-  font-family: $baseFontFamily;
-  font-size: $baseFontSize;
-  line-height: $baseLineHeight;
-  color: $textColor;
-  min-height:100px;
-  
-  /*background-color: $bodyBackground; */
- 
-  
-}
-
-#header{
-  height:60px;
-}
 
 #wrap{
     min-height: 100%;
@@ -33,17 +9,10 @@ body {
         margin: 0 auto -60px;
 }
 
-  #push{
-  height: 60px;
-  }
+#push{
+height: 60px;
+}
 
-footer {
-       background: transparent;
-         height: 20px;
-         line-height:20px;
-         margin-bottom:20px;
-         padding-bottom:20px;
-      }
 
 
 
@@ -65,6 +34,14 @@ a:focus {
 // Images
 // -------------------------
 
+.img-site-thumb{
+  padding:4px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  @include box-shadow(0 1px 3px rgba(0,0,0,.1));
+  width: 135px;
+}
+
 // Rounded corners
 .img-rounded {
   @include border-radius(6px);
@@ -83,3 +60,87 @@ a:focus {
 .img-circle {
   @include border-radius(500px); // crank the border-radius so it works with most reasonably sized images
 }
+
+//
+// Scaffolding
+// --------------------------------------------------
+ol, ul, li                  { list-style: none; display: inline-block; }
+                      /* Removes the bullets (ul) and numbers (ol) from unordered and ordered lists */
+blockquote, q                 { quotes: none; }
+                      /* Removes default quotes */
+blockquote:before, blockquote:after,
+q:before, q:after               { content: ''; content: none; }
+                      /* Fixes the above for blockquote and q for old ('08) versions of Webkit engine which does not support quotes property */
+table                     { border-collapse: collapse; border-spacing: 0; }
+                      /* Removes all spacing between cells, border-spacing does not work in IE7 and below */
+hr                      { background-color: #CCCCCC; border: none; height: 1px; }
+
+#wrapper                  { width: 1000px; margin: 0px auto; margin-bottom: 30px;margin-top: 30px; }
+                      /* Sets the default width of the content on the page and centers the page content (margin) */
+
+#results                  { position: absolute; left: 0px; padding: 30px; width: 500px; }
+
+#current-contact                { margin: 0px auto; margin-top: 30px; width: 900px; position: relative; }
+
+#next-contact-preload             { visibility: hidden; display: none; }
+
+#prev-contact-preload             { visibility: hidden; display: none; }
+
+#current-left                 { float: left; width: 325px; margin-right: 10px; }
+
+#current-right                { float: right; width: 525px; margin-left: 10px; text-align: center; }
+
+#current-picture               { width: 250px; margin-bottom: 50px; }
+
+.italics                  { font-style: italic; }
+
+#add-contact-container            { width: 1000px; clear: both; margin-bottom:30px; margin-top:100px;}
+
+
+#add-contact-left               { width: 400px; height: 25px; float: left; }
+
+#add-contact-right              { width: 400px; height: 25px; float: left; }
+
+#add-contact-job              { width: 200px; height: 25px; float: left; position: relative; top: -3px;  }
+
+#contact-comments                 { clear: both; height: 160px; overflow: auto; margin-bottom: 30px; }
+
+#previous-contact               { position: absolute; bottom: 1300px; left: 30px; width: 50px; height: 60px; }
+
+#previous-contact:hover             { background-image: url(../images/graphics/prev-hover.png); }
+
+#next-contact                 { position: absolute; bottom: 1300px; right: 30px;  width: 50px; height: 60px; }
+
+#next-contact:hover               { background-image: url(../images/graphics/next-hover.png); }
+
+.show-more-less               { width: 15px; position: relative; top: 1px; }
+
+#add-contact h3                 { display: inline; }
+
+input[type=text]              { border: 3px solid #CCCCCC; height: 20px; width: 250px; }
+
+textarea                  { border: 3px solid #CCCCCC; height: 40px; width: 250px; }
+
+select                    { border: 3px solid #CCCCCC; height: 30px; width: 260px; text-align: center; }
+
+table                     { margin: 0px auto; text-align: left; }
+
+td                      { width: 300px; }
+
+tr                      { height: 50px; }
+
+
+
+#add-contact                  { visibility: visible;  padding:100px; margin:100px;}
+
+#form-errors                { width: 300px; height: 450px; background: red; position: absolute; top: 677px; right: 50px; display: none; }
+
+.valid                    { background: #25e696; }
+
+.invalid                  { background: #e63625; }
+
+input[type=button]              { font: 16pt; padding-top: 5px; margin-top: 10px; }
+
+.info-container               { background: #FFFFFF; opacity: 0.75; width: 100px; position: absolute; border-radius: 10px; border: 3px solid #25D6E6; }
+
+.info                     { font: 8pt Venera; color: #313131; padding: 10px; font-weight: bold; }

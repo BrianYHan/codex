@@ -27,8 +27,13 @@
    background-color:$grayLight; }
 
 
-
-
+#experience, #education, #prog, #random{
+  height:100px;
+  line-height:100px;
+    &:hover{
+      background-color:gray;
+    }
+}
 
 
 

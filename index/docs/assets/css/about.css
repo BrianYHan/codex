@@ -1,181 +1,51 @@
-
-body 										{ line-height: 1; background: #FFFFFF url(../images/background/background.png) repeat;  text-align: center; }
-											/* Establishes standard line height for text across browsers */
-ol, ul, li 									{ list-style: none; display: inline-block; }
-											/* Removes the bullets (ul) and numbers (ol) from unordered and ordered lists */
-blockquote, q 								{ quotes: none; }
-											/* Removes default quotes */
-blockquote:before, blockquote:after,
-q:before, q:after 							{ content: ''; content: none; }
-											/* Fixes the above for blockquote and q for old ('08) versions of Webkit engine which does not support quotes property */
-table 										{ border-collapse: collapse; border-spacing: 0; }
-											/* Removes all spacing between cells, border-spacing does not work in IE7 and below */
-hr 											{ background-color: #CCCCCC; border: none; height: 1px; }
-
-
-/*	 *************************************************   FONT-FACE SETTINGS   *************************************************   */
-
-
-
-html, body, p, th, td, li, dd, dt 			{ font-family: Satisfy;   }
-											/* Establishes the default font size, family and color for (non-heading) text */
-h1, h2, h3, h4, h5, h6 						{ color: #25D6E6;  }
-											/* Establishes the default font family and color for heading text (size is dependent on the heading number) */
-h1 											{ font-size: 60pt; }
-											/* Overrides and sets the font size for the most important header (major sections); h1-h6 are used by search engines to index the structure of the page */
-h2 											{ font-size: 24pt; }
-											/* Overrides and sets the font size for the second most important header (secondary sections) */
-h3 											{ font-size: 14pt;  text-shadow: 0px 0px 0px #333333; }
-											/* Overrides and sets the font size for the third most important header */
-h4 											{ font-size: 16pt;  }
-											/* Overrides and sets the font size for the fourth most important header */
-h5 											{ font-size: 12pt; text-shadow: 0px 0px 0px #333333; }
-											/* Overrides and sets the font size for the second least important header */
-h6 											{ font: 10pt; text-shadow: 0px 0px 0px #333333; }
-											/* Overrides and sets the font size for the least important header */
-
-/*	 *************************************************   HIGHLIGHT SETTINGS   *************************************************   */
-
-::selection 								{ background: #000000; color: #FFFFFF; text-shadow: 0px 0px 0px #333333; }
-											/*  SAFARI: Overides the highlight (yellow) and font (black) color when selecting text; also removes text shadow  */
-::-moz-selection 							{ background: #000000; color: #FFFFFF; text-shadow: 0px 0px 0px #333333; }
-											/*  FIREFOX: Overides the highlight (yellow) and font (black) color when selecting text; also removes text shadow  */
-
-
-/*	 ***************************************************   LINK SETTINGS   ****************************************************   */
-
-
-
-
-/*	 **************************************************   SHADOW SETTINGS   ***************************************************   */
-
-/* 		Below are some useful shadows to have on hand for use. Include them in addition to whatever class or id is already in use. 
-		Box-shadow parameters: 1) The horizontal offset of the shadow, positive means the shadow will be on the right of the box, a 
-		negative offset will put the shadow on the left of the box. 2) The vertical offset of the shadow, a negative one means the 
-		box-shadow will be above the box, a positive one means the shadow will be below the box. 3) The blur radius (optional), if 
-		set to 0 the shadow will be sharp, the higher the number, the more blurred it will be. 4) The spread radius (optional), 
-		positive values increase the size of the shadow, negative values decrease the size. Default is 0 (the shadow is same size 
-		as blur). 5) Color. (http://css-tricks.com/snippets/css/css-box-shadow/) */
-
-.back-shadow 								{ box-shadow: 0px 0px 10px 1px #000000; -moz-box-shadow: 0px 0px 10px 1px #000000; -webkit-box-shadow: 0px 0px 10px 1px #000000; }
-											/* Creates a shadow behind the element on all edges (top-lighting) */
-.back-shadow-light-blue 					{ box-shadow: 0px 0px 10px 1px #0593A9; -moz-box-shadow: 0px 0px 10px 1px #0593A9; -webkit-box-shadow: 0px 0px 10px 1px #0593A9; }
-											/* Creates a shadow behind the element on all edges (top-lighting) */
-.back-shadow-heavy 							{ box-shadow: 0px 0px 25px 10px #000000; -moz-box-shadow: 0px 0px 25px 10px #000000; -webkit-box-shadow: 0px 0px 25px 10px #000000; }
-											/* Creates a darker shadow behind the element on all edges (top-lighting) */
-.back-shadow-light							{ box-shadow: 0px 0px 10px 1px #CCCCCC; -moz-box-shadow: 0px 0px 10px 1px #CCCCCC; -webkit-box-shadow: 0px 0px 10px 1px #CCCCCC; }
-											/* Creates a lighter shadow behind the element on all edges (top-lighting) */
-.inner-shadow 								{ box-shadow: inset 0 0 10px #000000; -moz-box-shadow: inset 0 0 10px #000000; -webkit-box-shadow: inset 0 0 10px #000000; }
-											/* Creates an inner shadow on the element */
-.bottom-right-shadow 						{ box-shadow: 3px 3px 5px 6px #000000; -moz-box-shadow: 3px 3px 5px 6px #000000; -webkit-box-shadow: 3px 3px 5px 6px #000000; }
-											/* Creates a shadow that is southeast of the element */
-.bottom-left-shadow 						{ box-shadow: -3px 3px 5px 6px #000000; -moz-box-shadow: -3px 3px 5px 6px #000000; -webkit-box-shadow: -3px 3px 5px 6px #000000; }
-											/* Creates a shadow that is southwest of the element */
-.top-right-shadow 							{ box-shadow: 3px -3px 5px 6px #000000; -moz-box-shadow: 3px -3px 5px 6px #000000; -webkit-box-shadow: 3px -3px 5px 6px #000000; }
-											/* Creates a shadow that is northeast of the element */	
-.top-left-shadow 							{ box-shadow: -3px -3px 5px 6px #000000; -moz-box-shadow: -3px -3px 5px 6px #000000; -webkit-box-shadow: -3px -3px 5px 6px #000000; }
-											/* Creates a shadow that is northwest of the element */					
-.bottom-edge-shadow 						{ box-shadow: 0 8px 6px -6px #000000; -moz-box-shadow: 0 8px 6px -6px #000000; -webkit-box-shadow: 0 8px 6px -6px #000000; }
-											/* Creates a black shadow below the element */
-.top-edge-shadow 							{ box-shadow: 0 -8px 6px -6px #000000; -moz-box-shadow: 0 -8px 6px -6px #000000; -webkit-box-shadow: 0 -8px 6px -6px #000000; }
-											/* Creates a black shadow above the element */
-.right-edge-shadow 							{ box-shadow: 8px 0 6px -6px #000000; -moz-box-shadow: 8px 0 6px -6px #000000; -webkit-box-shadow: 8px 0 6px -6px #000000; }
-											/* Creates a black shadow to the right of the element */
-.left-edge-shadow 							{ box-shadow: -8px 0 6px -6px #000000; -moz-box-shadow: -8px 0 6px -6px #000000; -webkit-box-shadow: -8px 0 6px -6px #000000; }
-											/* Creates a black shadow to the left of the element */
-.ie-bottom-rightshadow 						{ margin: 40px; background-color: rgb(68,68,68); /* Needed for IEs */
-
-	-moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
-	-webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
-	box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
-
-	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
-	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
-	zoom: 1;
+*{
+    margin:0;
+    padding:0;
 }
-.shadow1 .content {
-	position: relative; /* This protects the inner element from being blurred */
-	padding: 100px;
-	background-color: #DDD;
+.section{
+    margin-left:20px;
+    height:auto;
+    width:100%;
+    float:left;
+    text-shadow:1px 1px 2px #f0f0f0;
+}
+.section h2{
+    margin:50px 0px 30px 50px;
+}
+.section p{
+    margin:20px 0px 0px 50px;
+    width:600px;
 }
 
-
-/*	 ***************************************************   GRID SETTINGS   ****************************************************   */
-
-/* 		Below are some useful grid classes to create a simple grid system. The naming conventions are based on the fractional 
-		width that they span (http://css-tricks.com/snippets/css/css-box-shadow/) */
-
-/*	 ***********************************************   PAGE WRAPPER SETTINGS   ************************************************   */
-
-#wrapper 									{ width: 1000px; margin: 0px auto; margin-top: 30px; }
-											/* Sets the default width of the content on the page and centers the page content (margin) */
-#about-the-page 							{ width: 600px; margin: 0px auto; margin-top: 30px; margin-bottom: 50px; text-align: center; }
-
-#about-the-page p 							{ margin-bottom: 20px; }
-
-#results 									{ position: absolute; left: 0px; padding: 30px; width: 500px; }
-
-#current-contact 								{ margin: 0px auto; margin-top: 30px; width: 900px; position: relative; }
-
-#next-contact-preload 						{ visibility: hidden; display: none; }
-
-#prev-contact-preload 						{ visibility: hidden; display: none; }
-
-#current-left 								{ float: left; width: 325px; margin-right: 10px; }
-
-#current-right 								{ float: right; width: 525px; margin-left: 10px; text-align: center; }
-
-#current-poster 							{ width: 250px; margin-bottom: 50px; }
-
-.italics 									{ font-style: italic; }
-
-#add-contact-container 						{ width: 1000px; clear: both; }
-
-#add-contact-left 							{ width: 400px; height: 25px; float: left; }
-
-#add-contact-right 							{ width: 400px; height: 25px; float: left; }
-
-#add-contact-title 							{ width: 200px; height: 25px; float: left; position: relative; top: -3px; }
-
-#contact-synopsis 								{ clear: both; height: 160px; overflow: auto; margin-bottom: 30px; }
-
-#previous-contact 							{ position: absolute; top: 375px; left: 0px; background-image: url(../images/graphics/prev.png); width: 50px; height: 60px; }
-
-#previous-contact:hover 						{ background-image: url(../images/graphics/prev-hover.png); }
-
-#next-contact 								{ position: absolute; top: 375px; right: 0px; background-image: url(../images/graphics/next.png); width: 50px; height: 60px; }
-
-#next-contact:hover 							{ background-image: url(../images/graphics/next-hover.png); }
-
-.show-more-less 							{ width: 15px; position: relative; top: 1px; }
-
-#add-contact h3 								{ display: inline; }
-
-input[type=text] 							{ border: 3px solid #CCCCCC; height: 20px; width: 250px; }
-
-textarea 		 							{ border: 3px solid #CCCCCC; height: 40px; width: 250px; }
-
-select 										{ border: 3px solid #CCCCCC; height: 30px; width: 260px; text-align: center; }
-
-table 										{ margin: 0px auto; text-align: left; }
-
-td 											{ width: 300px; }
-
-tr 											{ height: 50px; }
-
-
-
-#add-contact 									{ visibility: hidden; display: none; }
-
-#form-errors 								{ width: 300px; height: 450px; background: red; position: absolute; top: 677px; right: 50px; display: none; }
-
-.valid 										{ background: #25e696; }
-
-.invalid 									{ background: #e63625; }
-
-input[type=button] 							{ font: 16pt; padding-top: 5px; margin-top: 10px; }
-
-.info-container 							{ background: #FFFFFF; opacity: 0.75; width: 100px; position: absolute; border-radius: 10px; border: 3px solid #25D6E6; }
-
-.info 										{ font: 8pt Venera; color: #313131; padding: 10px; font-weight: bold; }
-
+.section ul{
+    list-style:none;
+    margin:20px 0px 0px 550px;
+}
+.black ul li{
+    float:left;
+    padding:5px;
+    margin:5px;
+    color:#aaa;
+}
+.black ul li a{
+    display:block;
+    color:#f0f0f0;
+}
+.black ul li a:hover{
+    text-decoration:none;
+    color:#fff;
+}
+.white ul li{
+    float:left;
+    padding:5px;
+    margin:5px;
+    color:#aaa;
+}
+.white ul li a{
+    display:block;
+    color:#222;
+}
+.white ul li a:hover{
+    text-decoration:none;
+    color:#000;
+}

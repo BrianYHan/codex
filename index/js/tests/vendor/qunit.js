@@ -942,8 +942,8 @@ function fail(message, exception, callback) {
 		console.error(exception);
 		console.warn(callback.toString());
 
-	} else if ( window.opera && opera.postError ) {
-		opera.postError(message, exception, callback.toString);
+	} else if ( window.opera && opera.pictureror ) {
+		opera.pictureror(message, exception, callback.toString);
 	}
 }
 

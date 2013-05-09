@@ -1,0 +1,27 @@
+pre{
+	background-color:white;
+	color:black;
+}
+
+body{
+	background-color:#222;
+	color:#C14452;
+}
+
+.regularBackground{
+	background-color:#222;
+}
+
+.well{
+	background-color:#999;
+}
+
+.laBackground{
+  background-image: url('../img/losAngelesMorning.jpg');
+  background-size:100% 100%;
+  background-position: left top;
+  background-repeat:no-repeat;
+  background-origin:inherit;
+  min-height:900px;
+
+}

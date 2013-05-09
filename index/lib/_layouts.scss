@@ -5,7 +5,7 @@
 
 // Container (centered, fixed-width layouts)
 .container {
-  @include container-fixed();
+  @include container-fixed();  @include clearfix();
 }
 
 // Fluid layouts (left aligned, with sidebar, min- & max-width content)
@@ -15,29 +15,76 @@
   @include clearfix();
 }
 
-.containerBackground{
-	background-color: green;
+
+// Body reset
+// -------------------------
+
+body {
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $textColor;
+  background-color:$grayLight;
+  width:100%;
+  @include clearfix();
 }
 
-.containerFat{
-	overflow:hidden;
+body::-webkit-scrollbar {
+    background-color: #111;
+    margin-left: 0px;
+    width: 12px;
+    height: 20px;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0b0b0b;
+
+
+}
+
+body::-webkit-scrollbar-track-piece {
+    background-color: #38e3f3;
+    
+}
+
+.laBackground{
   background-image: url('../img/losAngelesFire.jpg');
-  background-size:120% 100%;
+  background-size:100% 100%;
   background-position: left top;
   background-repeat:no-repeat;
-	border-top:0px;
-  margin-top:0px;
-  padding-top:0px;
-  margin-bottom:0px;
-  padding-left:0px;
-  width:100%;
-  padding-right: $gridGutterWidth;
-  padding-left: $gridGutterWidth;
-  @include clearfix();
+  background-origin:inherit;
+  min-height:900px;
+
+}
+
+.topBackground{
+  background-image: url('../img/universe.jpg');
+  background-size:100% 100%;
+  background-position: left top;
+  background-repeat:no-repeat;
+
+  min-height:800px;
+}
+
+.middleBackground{
+background: #143142;
+
+min-height:200px;
+}
+
+.regularBackground{
+  background-color:$grayLight;
+  margin:0;
+}
+
+#header{
+  height:60px;
 }
 
 #codeBank{
   border-top:0px;
+  min-height:900px;
   margin-top:0px;
   padding-top:0px;
   margin-bottom:0px;
@@ -50,11 +97,11 @@
 
 
 #personalInfo{
-  margin-bottom: 0;
+  z-index:1000;
   line-height: 18px;
   font-size: 18px;
   color: $navbarText;
-  padding-top:40px;
+  padding-top:35px;
   padding-left: 20px;
   padding-right: 20px;
   a{
@@ -64,5 +111,47 @@
     text-decoration:underline;
     }
   }
+}
+
+
+.mainInfo{
+  margin-bottom:40px;
+  padding-top:40px;
+  h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight:900;
+    font-size:150px;
+    line-height:120px;
+    color:$white;
+     -webkit-text-stroke: 2px black;
+   text-shadow:
+       2px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+  h2{
+    font-size:90px;
+    line-height:110%;
+    font-weight:bold;
+       color:$white;
+    font-family:'Satisfy', sans-serif;
+  }
+  
+}
+
+
+footer{
+  color: $textSO;
+  background-color:transparent;
+  padding-top:10px;
+  
+  clear: both;
+  position: relative;
+  z-index: 10;
+  height: 2em;
+  margin-top: -2em;
+width:100%;
 }
 

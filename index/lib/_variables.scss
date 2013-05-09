@@ -2,7 +2,49 @@
 // Variables
 // --------------------------------------------------
 
+// Custom Variables
+// --------------------------------------------------
+#test{
+	text-decoration:none;
+		background-color:transparent;
+		&:hover, &:active{
+		color:black;
 
+		}
+	}
+
+	#default{
+	text-decoration:none;
+	color:white;
+		background-color:transparent;
+		&:hover, &:active{
+		color:black;
+		}
+	}
+		#alternate{
+	text-decoration:none;
+		color:white;
+		background-color:transparent;
+		&:hover, &:active{
+		color:#C14452;
+		}
+	}
+#alternate2{
+	text-decoration:none;
+		color:white;
+		background-color:transparent;
+		&:hover, &:active{
+		color:#ffc40d;
+		}
+	}
+	#alternate3{
+	text-decoration:none;
+		color:white;
+		background-color:transparent;
+		&:hover, &:active{
+		color:#25D6E6;
+		}
+	}
 // Global values
 // --------------------------------------------------
 
@@ -49,8 +91,11 @@ $linkColorHover:        lighten($linkColor, 15%) !default;
 // -------------------------
 $sansFontFamily:        'Satisfy',sans-serif;
 @import url(http://fonts.googleapis.com/css?family=Satisfy);
-// @import url(http://fonts.googleapis.com/css?family=Raleway:400,800);
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,800);
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC:400,400italic,700,700italic,900,900italic);
+$serifFontFamily:       'Playfair Display SC', serif !default;
+$raleway:								'Raleway' , sans-serif;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
 $baseFontSize:          18px !default;
@@ -58,7 +103,7 @@ $baseFontFamily:        $sansFontFamily !default;
 $baseLineHeight:        20px !default;
 $altFontFamily:         $serifFontFamily !default;
 
-$headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
+$headingsFontFamily:    $raleway !default; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold !default;    // instead of browser default, bold
 $headingsColor:         $textSO !default; // empty to use BS default, $textColor
 

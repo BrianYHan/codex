@@ -1,201 +1,306 @@
 
-<html >
-  <head>
-    <meta charset="utf-8">
-    <title>Brian Han</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Southern CA based UI/UX/JavaScript/CSS/HTML5/Ruby design and development. The site is a portfolio of various projects from 2011-Present.">
-    <meta name="author" content="Brian Han">
-
-    <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Jay Skript And The Domsters: Photos</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/basic.css" />
+  <script type="text/javascript" src="scripts/global.js"></script>
+  <script type="text/javascript" src="scripts/photos.js"></script>
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-     <link href="assets/css/FortAwesome-Font-Awesome-13d5dd3/css/font-awesome-ie7.min.css" rel="stylesheet">
+    <link href="assets/css/FortAwesome-Font-Awesome-13d5dd3/css/font-awesome-ie7.min.css" rel="stylesheet">
     <link href="assets/css/FortAwesome-Font-Awesome-13d5dd3/css/font-awesome.css" rel="stylesheet">
     <link href="assets/css/FortAwesome-Font-Awesome-13d5dd3/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons 
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="assets/ico/favicon.png">  -->
-  </head>
-  <script>
-    var Menu = {
-        el : $('.toggle-menu'),
-        list : $('.main-nav ul'),
-        init : function(){
-            if ($(window).width() <= 550) {
-                Menu.el.toggle(function(){
-                    Menu.list.slideDown(200);
-                }, function(){
-                    Menu.list.slideUp(200);
-                });
-            }
-        }
-    };
-  </script>
-  <body data-spy="scroll" data-target=".navbar">
-<div class="containerFat">
+    <script type="text/javascript" src="assets/js/styleswitcher.js"></script>
+    <style>
+     dl dt{
+      color:#999;
+    }
+    .well{
+      background-color:#333;
+      height:700px;
+      border-radius:14px;
+    }
+    #content{
+      height:900px;
+    }
+    </style>
+<link rel="alternate stylesheet" type="text/css" href="assets/css/cream.css" title="alternate">
+</head>
+<body data-spy="scroll" data-target=".navbar">
+<div class="regularBackground">
     <!-- Navbar
     ================================================== -->
-<?php include("header.php"); ?>
-<br>
-    
-        <div class="container">
-        <div class="page-header text-center">
-            <h1>Code<small> HTML5, SASS, PHP, RUBY, PYTHON applications</small></h1>
-        </div>
-       
-        <div class="row-fluid">
-            <br>
-            <!-- <div id="outer_container">
-                <div id="customScrollBox">
-                    <div class="container">
-                        <div class="content">
-                            <h1>My application gallery: <br /><span class="light"><span class="grey"><span class="s36">Frontend | Code</span></span></span></h1>
-               
-                                <div id="toolbar"></div>
-                                    <div class="clear"></div>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_lucernarium.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_lucernarium_thumb.jpg" title="Supremus Lucernarium" alt="Supremus Lucernarium" class="thumb" />
-                                        </a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_denebola.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_denebola_thumb.jpg" title="Denebola" alt="Denebola" class="thumb" />
-                                        </a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_lux.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_lux_thumb.jpg" title="Lux Aeterna" alt="Lux Aeterna" class="thumb" />
-                                        </a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_dk.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_dk_thumb.jpg" title="X-Wing on patrol" alt="X-Wing on patrol" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_albireo.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_albireo_thumb.jpg" title="Albireo Outpost" alt="Albireo Outpost" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_church.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_church_thumb.jpg" title="Church of Heaven" alt="Church of Heaven" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_Decampment.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_Decampment_thumb.jpg" title="Decampment" alt="Decampment" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_Hibernaculum.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_Hibernaculum_thumb.jpg" title="Hibernaculum" alt="Hibernaculum" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_moons.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_moons_thumb.jpg" title="Aurea Mediocritas" alt="Aurea Mediocritas" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_praedestinatio.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_praedestinatio_thumb.jpg" title="Praedestinatio" alt="Praedestinatio" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_transitorius.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_transitorius_thumb.jpg" title="Transitorius" alt="Transitorius" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_victimofgravity.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_victimofgravity_thumb.jpg" title="Victim of Gravity" alt="Victim of Gravity" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_lucernarium.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_lucernarium_thumb.jpg" title="Supremus Lucernarium" alt="Supremus Lucernarium" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_denebola.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_denebola_thumb.jpg" title="Denebola" alt="Denebola" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_lux.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_lux_thumb.jpg" title="Lux Aeterna" alt="Lux Aeterna" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_dk.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_dk_thumb.jpg" title="X-Wing on patrol" alt="X-Wing on patrol" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_albireo.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_albireo_thumb.jpg" title="Albireo Outpost" alt="Albireo Outpost" class="thumb" /></a>
-                                        <a href="imgs/space/Universe_and_planets_digital_art_wallpaper_church.jpg" class="thumb_link">
-                                            <span class="selected"></span>
-                                            <img src="imgs/space/Universe_and_planets_digital_art_wallpaper_church_thumb.jpg" title="Church of Heaven" alt="Church of Heaven" class="thumb" /></a>
-                                                            
-                            <p class="clear"></p>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                <div id="bg">
-                    <img src="universe.jpg" title="Supremus Lucernarium" id="bgimg" />
-                    <div id="preloader"><img src="assets/img/ajax-loader_dark.gif" width="32" height="32" align="absmiddle" />LOADING...</div>
-                    <div id="arrow_indicator"><img src="assets/img/sw_arrow_indicator.png" width="50" height="50"  /></div>
-                    <div id="nextimage_tip">Click for next image</div>
-                </div> -->
-
-        <div id= "codeBank" class="span3 ">
-            <h3 class="text-center">Past Projects</h3>
-          <!--   <div id="accordion">
-               
-                <div id="summer">
-                    <h4>Summer</h4>
-                    <p>The seasons are considered by some Western countries to start at the equinoxes and solstices, based on astronomical reckoning. In North American-printed English-language calendars, based on astronomy, summer begins on the day of the summer solstice and ends on the day of the autumn equinox. When it is summer in the Southern Hemisphere, it is winter in the Northern Hemisphere, and vice versa.</p>
-                    <p>But, because the seasonal lag is less than 1/8 of a year (except near large bodies of water), the meteorological start of the season, which is based on average temperature patterns, precedes by about three weeks the start of the astronomical season. According to meteorology, summer is the whole months of December, January, and February in the Southern Hemisphere, and the whole months of June, July, and August in the Northern Hemisphere. This meteorological definition of summer also aligns with commonly viewed notion of summer as the season with the longest (and warmest) days of the year, in which the daylight predominates, through varying degrees. The use of astronomical beginning of the seasons means that spring and summer have an almost equal pattern of the length of the days, with spring lengthening from the equinox to the solstice and summer shortening from the solstice to the equinox, while meteorological summer encompasses the build up to the longest day and decline thereafter, so that summer has many more hours of daylight than spring.</p>
-                    <p>Today, the meteorological reckoning of the seasons is used in Australia, Denmark, the former USSR and by many people in the United Kingdom, but the astronomical definition is still more frequently used in the United States.</p>
-                </div>
-                <div id="autumn">
-                    <h4>Autumn</h4>
-                    <p>Autumn (also known as fall in North American English) is one of the four temperate seasons. Autumn marks the transition from summer into winter. In the northern hemisphere, the start of autumn is generally considered to be around September, and in the southern hemisphere, its beginning is considered to be around March. There exist, however, different definitions of autumn, some of which are based on the months of the year while others are based on the equinox and solstice.</p>
-                    <p>During autumn, deciduous trees shed their leaves. Leaves change to a yellowish, reddish or brownish hue before falling. Such coloured leaves have come to be colloquially called "fall foliage" in North America. In temperate zones, autumn is the season during which most crops are harvested. It is also the season during which days get shorter and cooler and the nights get longer.</p>
-              </div>
-              <div id="winter">
-                 <h4>Winter</h4>
-                 <p>Winter is one of the four seasons of temperate zones. North American calendars go by astronomy and state that winter begins on the winter solstice and ends on the vernal equinox. Calculated meteorologically, it begins and ends earlier (typically at the start of the month with the equinox or solstice) and is the season with the shortest days and the lowest temperatures. Either way, it generally has cold weather and, especially in the higher latitudes or altitudes, snow and ice. The coldest average temperatures of the season are typically experienced in January in the Northern Hemisphere and in July in the Southern Hemisphere.</p>
-              </div>
-              <div style="float: none; clear: both; height: 0;"> </div>
-            </div> -->
-
-
-            <ul id="myTab" class="nav nav-tabs">
-              <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-              <li><a href="#profile" data-toggle="tab">Profile</a></li>
-             
-            </ul>
-            <div id="myTabContent" class="tab-content">
-              <div class="tab-pane fade in active" id="home">
-                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-              </div>
-              <div class="tab-pane fade" id="profile">
-                <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-              </div>
-             
-            </div>
-        </div>
-        
-        <div id ="codeGallery" class="span8">
-            <h3 class="text-center">Front End | Back End</h3>
-            <div class="row-fluid">
-                <div id="siteThumb" class="span4">
-                    
-                </div>
-                <div id="codeBox" class="span4">
-                </div>
-            </div>
-        </div>
-        
-   <img src='assets/img/aceHome.gif'/>
-
-</div>
-
-
-</div>
-    <!-- Footer
-    ================================================== -->
-    <?php include("footer.php"); ?>
+  <?php include("header.php"); ?>    
+  <div class="row-fluid">
+    <div class="span12 page-header">
+      <h1 class=" text-center">Code<small> HTML5, SASS, PHP, RUBY, PYTHON applications</small></h1>
+    </div>
+  </div>
+  <div class="row">
     <br>
-</div><!--end of containerFat-->
+    <div id= "codeBank" class="span4 well">
+      <h3 class="text-center">Past Projects</h3>
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="active"><a href="#abcsofFL" data-toggle="tab">ABCs of Financial Literacy</a></li>
+          <li><a href="#aceDental" data-toggle="tab">Ace Dental</a></li>
+        </ul>
+        <div id="content">
+        <div id="myTabContent" class="tab-content">
+          
+          <div class="tab-pane fade in active ralewayFont" id="abcsofFL">
+            <dl>
+              <dt>Summary</dt>
+              <dd>
+                Full frontend and backend design for the ABCs of Financial Literacy, a website that uses games and video lessons to prepare high school juniors and seniors for financial independence.
+              </dd><br>
+              <dt>URL</dt>
+              <dd>
+                <a href="http://sheltered-taiga-9686.herokuapp.com/">The ABC$ of Financial Literacy</a>
+              </dd><br>
+              <dt>Languages</dt>
+              <dd>
+                Ruby, HTML5, CSS, SASS, Javascript
+              </dd><br>
+              <dt>Frameworks</dt>
+              <dd>
+                Ruby on Rails, Bootstrap
+              </dd><br>
+              <dt>Features</dt>
+              <dd>
+                Multiple login authorizations, AmazonS3 File uploads, Document sharing, interactive JS Game
+              </dd><br>
+            </dl>
+            <ul id="imagegallery">
+              <li>
+                <a href="assets/img/screenshots/abchome.png"  title="ABCs of Financial Literacy Homepage" description="yoyo">
+                  <img class="img-site-thumb" src="assets/img/screenshots/abchome.png" alt="ABC homepage" />
+                </a>
+              </li>
+                <li>
+                <a href="assets/img/screenshots/abcAbout.png"  title="ABCs of Financial Literacy Aboutpage" description="yoyo">
+                  <img class="img-site-thumb" src="assets/img/screenshots/abcAbout.png" alt="ABC About page" />
+                </a>
+              </li>
+             <li>
+                <a href="assets/img/screenshots/abcCourseDirectory.png"  title="ABCs of Financial Literacy Course Directory" description="yoyo">
+                  <img class="img-site-thumb" src="assets/img/screenshots/abcCourseDirectory.png" alt="ABC Course Directory" />
+                </a>
+              </li>
+             <li>
+                <a href="assets/img/screenshots/abcThriveBudget.png"  title="ABCs of Financial Literacy Budget" description="yoyo">
+                  <img class="img-site-thumb" src="assets/img/screenshots/abcThriveBudget.png" alt="ABC thrive budget" />
+                </a>
+              </li>
+            </ul>
+           </div>
+              <div class="tab-pane fade in ralewayFont" id="aceDental">
+                <dl>
+                  <dt>Summary</dt>
+                    <dd>
+                      Full Frontend and Backend design for Ace Dental Laboratory
+                    </dd><br>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href="http://mysterious-hollows-7470.herokuapp.com/">Ace Dental Lab</a>
+                  </dd><br>
+                  <dt>Languages</dt>
+                  <dd>
+                    Ruby, HTML5, CSS, SASS
+                  </dd><br>
+                  <dt>Libraries</dt>
+                  <dd>
+                    Javascript, JQUERY
+                  </dd><br>
+                  <dt>Frameworks</dt>
+                  <dd>
+                    Ruby on Rails, Bootstrap
+                  </dd><br>
+                </dl>
+                 <ul id="imagegallery">
+              <li>
+                <a href="assets/img/screenshots/aceHome.png"  title="Ace Dental Homepage" description="yoyo">
+                  <img class="img-site-thumb" src="assets/img/screenshots/aceHome.png" alt="Ace Dental Homepage" />
+                </a>
+              </li>
+                <li>
+                <a href="assets/img/screenshots/aceContact.png"  title="Ace Dental Contact Page" description="yoyo">
+                  <img class="img-site-thumb" src="assets/img/screenshots/aceContact.png" alt="Ace Dental Contact Page" />
+                </a>
+              </li>
+             <li>
+                <a href="assets/img/screenshots/aceSchedule.png"  title="Ace Dental Schedule Page" description="yoyo">
+                  <img class="img-site-thumb" src="assets/img/screenshots/aceSchedule.png" alt="Ace Dental Schedule Page" />
+                </a>
+              </li>
+             <li>
+                <a href="assets/img/screenshots/aceShipping.png"  title="Ace Shipping Page" description="yoyo">
+                  <img class="img-site-thumb" src="assets/img/screenshots/aceShipping.png" alt="ABC thrive budget" />
+                </a>
+              </li>
+            </ul>
+              </div>
+       
+             
+          
+            </div>
+        </div> 
+  </div>
 
+    <center>
+        <div id ="codeGallery" class="span8 well" style="height:auto;">
+          <h3 class="text-center">Front End | Back End &nbsp 
+            <small>
+              <a href="#" id="default" onclick="setActiveStyleSheet('default'); return false;">Soda Themed</a> 
+              <a href="#" id="alternate" onclick="setActiveStyleSheet('alternate'); return false;">Black on White Themed</a>
+            </small>
+          </h3>
+            <div class="row" id="siteThumb" >
+              
+            </div>
+            <div class="row">
+              <div id="codeBox" style="height:50%; margin-left:30px">
+    <pre>
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;<%= full_title(yield(:title)) %>&lt;/title&gt;
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    &lt;body&gt; 
+    <%= render 'layouts/header'%>
+    &lt;div class ="container"&gt;
+    <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+    <% end %>
+    <%= yield %>
+    &lt;center&gt;
+    <%= render 'layouts/footer' %>
+    &lt;/center&gt;
+    &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </pre>
+                  </div>
+            </div>      
+    </center>
+</div>
+
+      <?php include("footer.php"); ?>
+    </div>
+  <script>
+
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      oldonload();
+      func();
+    }
+  }
+}
+
+function insertAfter(newElement,targetElement) {
+  var parent = targetElement.parentNode;
+  if (parent.lastChild == targetElement) {
+    parent.appendChild(newElement);
+  } else {
+    parent.insertBefore(newElement,targetElement.nextSibling);
+  }
+}
+
+function addClass(element,value) {
+  if (!element.className) {
+    element.className = value;
+  } else {
+    newClassName = element.className;
+    newClassName+= " ";
+    newClassName+= value;
+    element.className = newClassName;
+  }
+}
+
+function highlightPage() {
+  if (!document.getElementsByTagName) return false;
+  if (!document.getElementById) return false;
+  if (!document.getElementById("navigation")) return false;
+  var nav = document.getElementById("navigation");
+  var links = nav.getElementsByTagName("a");
+  for (var i=0; i<links.length; i++) {
+    var linkurl = links[i].getAttribute("href");
+    var currenturl = window.location.href;
+    if (currenturl.indexOf(linkurl) != -1) {
+      links[i].className = "here";
+      var linktext = links[i].lastChild.nodeValue.toLowerCase();
+      document.body.setAttribute("id",linktext);
+    }
+  }
+}
+
+addLoadEvent(highlightPage);
+
+
+function showPic(whichpic) {
+  if (!document.getElementById("placeholder")) return true;
+  var source = whichpic.getAttribute("href");
+  var placeholder = document.getElementById("placeholder");
+  placeholder.setAttribute("src",source);
+  if (!document.getElementById("description")) return false;
+  if (whichpic.getAttribute("title")) {
+    var text = whichpic.getAttribute("title");
+  } else {
+    var text = "";
+  }
+  var description = document.getElementById("description");
+  if (description.firstChild.nodeType == 3) {
+    description.firstChild.nodeValue = text;
+  }
+  return false;
+}
+
+function preparePlaceholder() {
+  if (!document.createElement) return false;
+  if (!document.createTextNode) return false;
+  if (!document.getElementById) return false;
+  if (!document.getElementById("imagegallery")) return false;
+  var placeholder = document.createElement("img");
+  placeholder.setAttribute("id","placeholder");
+  placeholder.setAttribute("src","Nlt51.jpeg");
+  placeholder.setAttribute("alt","Code Gallery");
+  var description = document.createElement("p");
+  description.setAttribute("id","description");
+  description.setAttribute("class","lead");
+  var desctext = document.createTextNode("Choose an thumbnail from the left!");
+  description.appendChild(desctext);
+  var gallery = document.getElementById("siteThumb");
+  insertAfter(description,gallery);
+  insertAfter(placeholder,description);
+}
+
+function prepareGallery() {
+  if (!document.getElementsByTagName) return false;
+  if (!document.getElementById) return false;
+  if (!document.getElementById("imagegallery")) return false;
+  var gallery = document.getElementById("imagegallery");
+  var links = gallery.getElementsByTagName("a");
+  for ( var i=0; i < links.length; i++) {
+    links[i].onclick = function() {
+      return showPic(this);
+    }
+  }
+}
+
+addLoadEvent(preparePlaceholder);
+addLoadEvent(prepareGallery);
+  </script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="assets/js/about.js"></script>
 </body>
 </html>
